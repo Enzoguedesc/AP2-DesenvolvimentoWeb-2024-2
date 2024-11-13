@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <link rel="stylesheet" href="CSS/estilo.css">
     <script src="js/codigo.js" defer></script>
     <link rel="shortcut icon" href="escudo.png" type="image/x-icon">
-    
+
     <title>Jogadores Botafogo</title>
+
 </head>
 <body>
-    <header></header>
 
-    <h1 id="titulo">Jogadoras do Botafogo</h1>
+    <header>
+        <h1> Atletas Botafogo 2024</h1>
+        <a href="index.html" id="button-sair">Sair</a>
+    </header>
 
     <div id="filtro"></div>
 
-    <div id='container'></div>
-    
-    <p></p>
-    <main></main>
+    <p id="p-carregando">
+        Carregando...
+    </p>
+
+    <main>
+        <select type="buttons" id="button-elenco">
+            <option value="">Selecione uma categoria</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="all">Todas as categorias</option>
+        </select>
+    </main>
+
 </body>
 </html>

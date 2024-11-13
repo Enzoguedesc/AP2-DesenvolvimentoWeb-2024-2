@@ -9,7 +9,7 @@ const verificaSenha = ( ) => {
         alert("A senha está incorreta");
     }
 
-    const limpaCoiso = () => {
+    const limpaLogado = () => {
         localStorage.removeItem('logado');
         window.location = '/';
     }
@@ -23,9 +23,9 @@ const login = () => {
 
     const tudo = document.getElementById('login');
 
-  document.body.appendChild(tudo);  
+  document.body.appendChild(tudo);
 
-  
+
   if (sessionStorage.getItem('logado')) {
     document.getElementById('saida-container');
     document.getElementById('login-container');

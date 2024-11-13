@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 body{
     margin: 0;
+    background-color: rgb(210, 233, 247);
+}
+
+#img-botafogo{
+    width: 167px;
+    height: 188px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 45%;
+    padding-top: 5%;
+
 }
 
 #login{
@@ -8,9 +21,10 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
-    background-color: rgb(210, 233, 247);
+    height: 55vh;
+
 }
+
 
 #areaLogin{
     text-align: center;
@@ -24,11 +38,8 @@ body{
     text-decoration: none;
     cursor: pointer;
     border-radius: 5%;
-
-
     font-size: 12px;
     padding: 4px 5px;
-
     margin: 0px 0px 0px 10px;
 }
 
@@ -43,6 +54,63 @@ body{
 
 #titulo_login{
     margin: 0px 0px 0px;
-    
+    color: black;
+
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    background-color: #002555;
+    align-items: center;
+    margin: 0px 0px 30px 0px;
+}
+
+h1{
+    color: #f1f1f1;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#button-sair{
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #f5ac00;
+    padding: 15px;
+    border-radius: 4px;
+    width: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+#voltra-button{
+    color:#f1f1f1;
+    text-decoration: none;
+    margin: 47%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f5ac00;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#button-elenco{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 13px;
+    background-color: #212121;
+    color: #f1f1f1;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+#p-carregando{
+    display: block;
+    text-align: center;
+    color: black;
+}
