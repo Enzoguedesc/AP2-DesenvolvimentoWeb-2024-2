@@ -47,7 +47,7 @@ const perfil_jogador = () => {
   const detalhes_div = document.getElementById('informacoes');
 
   detalhes_div.innerHTML = `
-    <p>Nome do(a) jogador(a): ${localStorage.getItem('nome_completo')}</p>
+    <p>Nome do(a) jogador(a): ${localStorage.getItem('nome')}</p>
     <p>Nascimento: ${localStorage.getItem('nascimento')}</p>
     <p>Altura: ${localStorage.getItem('altura')}</p>
     <p>Descrição: ${localStorage.getItem('descricao')}</p>
@@ -58,6 +58,18 @@ perfil_jogador();
 
 const voltar = () => {
   const exit = document.querySelector('footer');
+
+  const sai = document.getElementById('voltar-button');
+  sai.href = 'jogadores.html';
+  sai.textContent = 'Voltar';
+  sai.style.color = '#f1f1f1';
+  sai.style.textDecoration = 'none';
+  sai.style.fontSize = '16px';
+  sai.style.fontWeight = 'bold';
+  sai.style.backgroundColor = '#212121';
+  sai.style.padding = '10px';
+  sai.style.borderRadius = '4px';
+  sai.style.margin = '47%';
 
   exit.appendChild(exit);
 };
