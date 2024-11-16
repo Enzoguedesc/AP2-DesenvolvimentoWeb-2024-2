@@ -1,3 +1,91 @@
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get('id');
+
+const pega_json = async (caminho) => {
+    const resposta = await fetch(caminho);
+    const dados = await resposta.json();
+    return dados;
+}
+
+const acha_cookie = (chave) => {
+    const array_cookies = document.cookie.split('; ')
+    const procurado = array_cookies.find(
+        ( ele ) => ele.startsWith(`${chave}=`)
+    )
+
+    return procurado.split('=')[1];
+}
+
+
+console.log(acha_cookie('nome'));
+
+console.log(sessionStorage.getItem('nome'));
+
+const obj = JSON.parse(sessionStorage.getItem('atleta'));
+
+console.log(obj.caminhoImagem);
+
+
+
+if (sessionStorage.getItem("logado")){
+pega_json(`https://botafogo-atletas.mange.li/2024-1/${id}`).then(
+    ( atleta ) => {
+
+        document.body.innerHTML = '';
+
+
+
+        const nome = document.createElement('h1');
+        nome.innerHTML = atleta.nome;
+
+        document.body.appendChild(nome);
+
+
+
+        const posicao = document.createElement('h2');
+        posicao.innerHTML = atleta.posicao;
+
+        document.body.appendChild(posicao);
+
+
+
+
+        const imagem = document.createElement('img');
+        imagem.src = atleta.imagem;
+        imagem.alt = `foto de ${atleta.imagem}`
+
+        document.body.appendChild(imagem);
+
+
+
+        const nascimento = document.createElement('p');
+        nascimento.innerHTML = atleta.nascimento;
+
+        document.body.appendChild(nascimento);
+
+
+
+        const naturalidade = document.createElement('p');
+        naturalidade.innerHTML = atleta.naturalidade;
+
+        document.body.appendChild(naturalidade);
+
+
+
+        const detalhes = document.createElement('p');
+        detalhes.innerHTML = atleta.detalhes;
+
+        document.body.appendChild(detalhes);
+
+
+    }
+)
+} else {
+    document.body.innerHTML = "<h1 id='e_preciso_logar'>É preciso estar logado para ver. </h1>"
+}
+
+/*
 const exibir = (dados) => {
   const detalhesImagem = document.createElement("img");
   detalhesImagem.src = dados.imagem;
@@ -75,3 +163,4 @@ const voltar = () => {
 };
 
 voltar();
+*/

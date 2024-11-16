@@ -5,6 +5,15 @@ body{
     background-color: rgb(210, 233, 247);
 }
 
+#container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
 #img-botafogo{
     width: 167px;
     height: 188px;
@@ -54,8 +63,12 @@ body{
 
 #titulo_login{
     margin: 0px 0px 0px;
-    color: black;
+    color: rgb(0, 0, 0);
 
+}
+
+#titulo-jogadores{
+    color: white;
 }
 
 header{
@@ -68,7 +81,6 @@ header{
 }
 
 h1{
-    color: #f1f1f1;
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -101,6 +113,7 @@ h1{
 #button-elenco{
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 18px;
     padding: 13px;
     background-color: #212121;
@@ -117,7 +130,6 @@ h1{
 
 article{
     width: 20rem;
-    font-size: 0.9rem;
     border: 2px solid black;
     padding: 10px;
     margin: 0 0 2em 2em;
@@ -126,3 +138,18 @@ article{
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
 }
+
+#filtro{
+    text-align: center;
+}
+
+button{
+    font-size: 18px;
+    padding: 13px;
+    background-color: rgb(33, 33, 33);
+    color: rgb(241, 241, 241);
+    border-radius: 4px;
+    margin: 20px;
+    cursor: pointer;
+}
+

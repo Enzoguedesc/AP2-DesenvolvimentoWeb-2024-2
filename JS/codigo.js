@@ -33,7 +33,6 @@ const montaCartao = (atleta) => {
     const cartao = document.createElement('article');
     const nome = document.createElement('h1');
     const imagem = document.createElement('img');
-    const descri = document.createElement('p');
 
     const link = document.createElement('a');
 
@@ -43,12 +42,9 @@ const montaCartao = (atleta) => {
     imagem.src = atleta.imagem;
     cartao.appendChild(imagem);
 
-    descri.innerHTML = atleta.detalhes;
-    cartao.appendChild(descri);
-
 
     link.innerHTML = "Saiba mais"
-    link.href = `outra.html?id=${atleta.id}&altura=${atleta.altura};`
+    link.href = `outra.html?id=${atleta.id};`
     cartao.appendChild(link);
 
     cartao.onclick = trataClick;
@@ -93,21 +89,8 @@ document.getElementsById('header');
   adjustLayout(main);
 });
 
-const adjustLayout = (main) => {
-  const windowWidth = window.innerWidth;
-  const filtro = document.getElementById('filtro');
 
-  if (windowWidth <= 768) {
-    setSingleColumnLayout(main);
-    initializeButtons(filtro, 'buttons');
-  } else if (windowWidth <= 1024) {
-    setTwoColumnsLayout(main);
-    initializeButtons(filtro, 'buttons');
-  } else {
-    setFourColumnsLayout(main);
-    initializeButtons(filtro, 'buttons');
-  }
-};
+
 
 
 
