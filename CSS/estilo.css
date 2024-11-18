@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 body{
-    margin: 0;
+    display: block;
+    margin: 8px;
     background-color: rgb(210, 233, 247);
 }
 
 #container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1200px;
-    text-align: center;
-    justify-content: center;
+    gap: 1em;
     margin: auto;
+    grid-template-columns: 1fr;
 }
 
 #img-botafogo{
@@ -37,8 +36,13 @@ body{
 
 #areaLogin{
     text-align: center;
-    flex: 0.6 1 0%;
+    flex: 0.7 ;
 }
+
+#senha-login{
+    width: auto;
+}
+
 
 #entrar{
     background-color: black;
@@ -87,7 +91,7 @@ h1{
 }
 
 #button-sair{
-    color: #f1f1f1;
+    color: #000000;
     text-decoration: none;
     font-size: 17px;
     font-weight: bold;
@@ -97,39 +101,40 @@ h1{
     width: 3em;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.5);
 }
 
-#voltra-button{
-    color:#f1f1f1;
+#voltar-button{
+    color: black;
     text-decoration: none;
-    margin: 47%;
-    border-radius: 5px;
     padding: 10px;
-    background-color: #f5ac00;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
 }
 
 #button-elenco{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    padding: 13px;
-    background-color: #212121;
-    color: #f1f1f1;
+    display: block;
+    border: none;
+    font-size: large;
+    padding: 1em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    color: white;
     border-radius: 5px;
-    margin: 20px;
+    margin: 1em auto 0.5em;
 }
 
-#p-carregando{
+#carregando{
     display: block;
     text-align: center;
     color: black;
 }
 
-article{
-    width: 20rem;
+#article_jogadores{
+    width: min-content;
     border: 2px solid black;
     padding: 10px;
     margin: 0 0 2em 2em;
@@ -137,19 +142,134 @@ article{
     background-color: white;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+    width: min-content;
+    cursor: pointer;
+}
+
+#article_jogadores img{
+    width: 100%;
 }
 
 #filtro{
     text-align: center;
+    display: none;
 }
 
 button{
     font-size: 18px;
     padding: 13px;
-    background-color: rgb(33, 33, 33);
+    background-color: black;
     color: rgb(241, 241, 241);
     border-radius: 4px;
     margin: 20px;
     cursor: pointer;
+
+}
+
+#body_jogador{
+    margin: 3em;
+}
+
+#container_01{
+    display: flex;
+    align-items: center;
+    gap: 5em;
+    flex-direction: row;
+}
+
+#container_02{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+#container_03{
+    font-size: 1.1em;
+}
+
+
+
+p{
+    font-size: 1.2em;
+    justify-content: center;
+    width: 50%;
+}
+
+
+#saiba_mais{
+    border: solid 1px black;
+    border-radius: 8px;
+    color: black;
+    background-color: #f5ac00;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    padding: 10px;
+}
+
+#saiba_mais:hover{
+    background-color: blue;
+    color: white;
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+#pesquisa{
+    text-align: center;
+    margin: 0px auto 2em;
+}
+
+#barra_pesquisa{
+    text-align: center;
+    line-height: 3em;
+    max-width: 80%;
+    width: 30em;
+}
+
+
+
+
+@media screen and (min-width: 769px) {
+    #button-elenco {
+        display: none;
+    }
+    #filtro{
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+@media screen and (min-width: 1301px) {
+    #container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1401px) {
+    #container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+
+@media screen and (min-width: 769px) {
+    #container_01 {
+        flex-direction: row;
+    }
+
 }
 
