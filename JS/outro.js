@@ -86,6 +86,7 @@ pega_json(`https://botafogo-atletas.mange.li/2024-1/${id}`).then(
 
             document.body.appendChild(container_01);
             document.body.appendChild(voltar);
+
           }
       }
   )
