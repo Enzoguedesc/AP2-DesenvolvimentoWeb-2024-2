@@ -19,7 +19,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0px 45%;
+    margin: auto;
     padding-top: 5%;
 
 }
@@ -29,7 +29,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 55vh;
+    height: 50vh;
 
 }
 
@@ -294,3 +294,20 @@ p{
 
 }
 
+@media screen and (max-width: 1010px){
+    #login{
+        flex-direction: column;
+        height: 100vh;
+    }
+    #titulo_login{
+        text-align: center;
+        flex: 0.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #areaLogin{
+        text-align: center;
+        flex: 1;
+    }
+}
