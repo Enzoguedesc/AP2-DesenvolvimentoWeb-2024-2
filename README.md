@@ -6,4 +6,6 @@ Possui:
 - Filtragem dos jogadores
 - Um card com as informações pessoais de cada jogador
 
+### Linguagens: HTML, JavaScript e CSS
+
 ### https://enzoguedesc.github.io/AP2-DesenvolvimentoWeb-2024-2/
